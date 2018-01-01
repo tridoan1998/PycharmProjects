@@ -34,19 +34,35 @@ def question_format():
 
 def first_spot():
     first = turtle.Turtle()
+    first.hideturtle()
+    first.penup()
+    first.goto(200, -100)
+    first.left(10)
+
 
 
 def text_input():
+    spot1 = ""
+    spot2 = ""
+    spot3 = ""
     x = ""
-    turtle.textinput("Letter go here: ", x)
-    if(x == "N"):
-
-    else if (x ==  "G")
-
-    else if(x == "A")
+    done = False
+    while done:
+        turtle.textinput("Letter go here: ", x)
+        if x == "N":
+            spot1 = "N"
+        if x == "G":
+            spot2 = "G"
+        if x == "A":
+            spot3 = "A"
+        if spot1 == "N" and spot2 == "G" and spot3 == "A":
+            done = True
+        else:
+            continue
 
 draw_frame()
 question_format()
+first_spot()
 BG.mainloop()
 
 
