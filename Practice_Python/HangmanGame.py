@@ -27,7 +27,7 @@ def question_format():
     word = turtle.Turtle()
     word.hideturtle()
     word.penup()
-    word.goto(200, 220)
+    word.goto(310, 220)
     word.color("blue")
     word.write("Question: Who is Tri currently have a crush on right now?", move=False, align="right", font=("Time New Roman", 15, "normal"))
 
@@ -35,34 +35,48 @@ def question_format():
 def first_spot():
     first = turtle.Turtle()
     first.hideturtle()
+    first.color("black")
+    first.pensize(6)
     first.penup()
-    first.goto(200, -100)
-    first.left(10)
+    first.goto(100, 100)
+    first.pendown()
+    first.begin_fill()
+    first.forward(30)
 
 
+def got_first_spot_right():
+    word = turtle.Turtle()
+    word.hideturtle()
+    word.penup()
+    word.goto(100, 130)
+    word.color("red")
+    word.write("N", move=False, align="right", font=("Time New Roman", 15, "normal"))
+
+answer = "NGA"
 
 def text_input():
-    spot1 = ""
-    spot2 = ""
-    spot3 = ""
     x = ""
-    done = False
-    while done:
-        turtle.textinput("Letter go here: ", x)
-        if x == "N":
-            spot1 = "N"
-        if x == "G":
-            spot2 = "G"
-        if x == "A":
-            spot3 = "A"
-        if spot1 == "N" and spot2 == "G" and spot3 == "A":
-            done = True
-        else:
-            continue
+    answer = "NGA"
+    turtle.textinput("Enter the letter here: ", x)
+    if x == answer[0]:
+        print("sdfdsf")
+        spot1 = "N"
+        got_first_spot_right()
+    elif x == answer[1]:
+        spot2 = "G"
+    elif x == answer[2]:
+        spot3 = "A"
+    else
+        cint
+
 
 draw_frame()
-question_format()
+ScrolledText.frame
+
+    question_format()
 first_spot()
+text_input()
+
 BG.mainloop()
 
 
