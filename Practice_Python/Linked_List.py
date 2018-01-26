@@ -1,28 +1,39 @@
 class Node():
-    def __init__(self, ndata):
-        self.data = ndata
+    def __init__(self, data):
+        self.data = data
         self.next = None
 
-class LinkList():
+class link_list():
     def __init__(self):
         self.head = None
 
-    def print(self):
-        if self.head is None:
-            print("The list is empty.")
+    def insert_beginning(self, data):
+        p = self.head
+        if(p is None):
+            temp = Node(data)
+            temp.next = self.head
+            self.head = temp
         else:
-            p = self.head
-            while p is not None:
-                print(p.data, " ")
-                p = p.next
-
-    def insert_start(self, data):
+            temp = Node(data)
+            temp.next = p.next
         temp = Node(data)
         temp.next = self.head
         self.head = temp
 
-mylist = LinkList
-mylist.insert_start(13)
-mylist.print()
+    def print(self):
+        temp = self.head
+        if temp is None:
+            print("empty.")
+            return
+        else:
+            while(temp is not None):
+                print(temp.data, " ")
+                temp = temp.next
+
+
+
+linklist = link_list()
+linklist.insert_beginning(1)
+linklist.print()
 
 
