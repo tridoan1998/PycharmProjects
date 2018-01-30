@@ -29,14 +29,9 @@ class link_list():
             temp = Node(data)
             self.head = temp
             self.tail = temp
-        elif self.size is 1:
-            temp = Node(data)
-
-            self.head = temp
-            self.tail = temp
         else:
             temp = Node(data)
-            temp.next = self.tail
+            self.tail.next = temp
             self.tail = temp
         self.size += 1
 
@@ -96,7 +91,7 @@ class link_list():
         else:
             temp = self.head
             count = 1
-            while count < position -1:
+            while count < position :
                 temp = temp.next
                 count += 1
             if self.size is 1:
@@ -107,41 +102,87 @@ class link_list():
                 print(temp.data)
     def delete_data_at_current_node(self, position):
         temp = self.head
-        if temp is None:
-            print("The list is already empty!")
-            return
-        elif position > self.size:
-            print("The list is smaller than that.")
-            return
-        else:
-            count = 1
-            while count < (position - 1):
+        print(temp)
+        print(temp.next)
+        print(temp.next.next)
+        print(temp.next.next.next)
+        print(" ")
+
+        count = 1
+        while count < (position-1):
+            temp = temp.next
+            count += 1
+        print(temp)
+        del temp.next
+        print(temp)
+
+    def find_value_(self, value):
+        temp = self.head
+        while temp:
+            if temp.data == value:
+                return True
+            else:
                 temp = temp.next
+            if temp.next is None:
+                return False
+
+    def count(self, value):
+        temp = self.head
+        count = 0
+        if temp is None:
+            print("The list is empty.")
+            return
+        while temp is not None:
+            if temp.data == value:
                 count += 1
+                temp = temp.next
+            else:
+                temp = temp.next
+        if count is 0:
+            print("The list has no element ", value)
+        else:
+            print("The list has the element", value , " which occured: " , count , "times")
 
-    def ask_for_position(self):
-        position = input("PLease enter the position you want to insert: ")
-        return position
 
-    def insert_at_current_node(self, data):
-        if self.head is None:
-            print("The list has no element so we will insert to the front.")
-            self.head = Node(data)
-            print(self.head.data)
+    def remove_a_node(self):
+        temp = self.head
+        temp = temp.next.next
+        del temp.next
 
+
+array = []
+print(array.__len__())
+
+keep = True
+count = 0
+while keep is True:
+    x = int(input("Enter data here: "))
+    array.append(x)
+    count += 1
+    y = str(input("Are you still want to input? Y or N"))
+    print(y)
+    if y is "Y":
+        continue
+    elif y is "N":
+        break
+
+
+print("The array you created are: ", array)
+
+
+
+
+
+""""
 linklist = link_list()
-linklist.insert_at_current_node(2)
-linklist.insert_end(13)
-linklist.insert_end(20)
-linklist.insert_end(100)
-linklist.insert_end(40)
+
+linklist.insert_end(1)
+linklist.insert_end(2)
+linklist.insert_end(3)
+linklist.insert_end(4)
 
 linklist.print()
-print("The size of the list is:", linklist.print_size())
-print("Position of number 20 is:", linklist.search(20))
 
-linklist.print_data_at_current_node(2)
-print("The list now has: ")
-linklist.print()
+linklist.count(1)
 
-position = linklist.ask_for_position()
+"""
