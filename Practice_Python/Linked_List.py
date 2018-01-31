@@ -150,10 +150,8 @@ class link_list():
         del temp.next
 
 
-array = []
-print(array.__len__())
 
-
+""""
 keep = True
 count = 0
 while keep is True:
@@ -168,25 +166,32 @@ while keep is True:
         break
 
 print("The array you created are: ", array)
+"""
 
-def bubble_sort(array):
-    #travel through all array element
-    for i in range(0, array.__len__()):
-        #
-        for j in range(0, array.__len__()):
-            if array[j] > array[i]:
-                temp = array[i]
-                array[i] = array[j]
-                array[j] = temp
+#arr = [64, 34, 25, 12, 22, 11, 90]
+arr = [5, 1, 4, 2, 8]
+length = len(arr)
+
+print(arr)
+def bubble_sort(arr):
+    for i in range(0, length):
+        print(i+1)
+        print(" ")
+        for j in range(0, length - i -1):
+            if arr[j] > arr[j+1]:
+                print(arr[j], "(arr[j])", "is bigger than ", arr[j+1], "(arr[j+1])")
+                temp = arr[j+1]
+                arr[j+1] = arr[j]
+                arr[j] = temp
+                print(arr)
             else:
+                print(arr[j], "(arr[j])", "is not less than", arr[j+1], "(arr[j+1])")
                 continue
-        print(array)
-    return array
+        print()
+        print("Array after swaped:", arr)
+        print(" ")
+    return arr
 
 
-
-print("The new array that sorted: ")
-print(bubble_sort(array))
-
-
+print(bubble_sort(arr))
 
