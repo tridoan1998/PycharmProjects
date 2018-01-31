@@ -150,22 +150,9 @@ class link_list():
         del temp.next
 
 
-
-
-def swap(a, b):
-    c = 0
-    c = a
-    a = b
-    b = c
-    print(a, b)
-
-
-
-
-
-
 array = []
 print(array.__len__())
+
 
 keep = True
 count = 0
@@ -180,34 +167,26 @@ while keep is True:
     elif y is "n":
         break
 
-
 print("The array you created are: ", array)
 
-
-
 def bubble_sort(array):
-    for i in range(1, array.__len__()):
-        for j in range (1, array.__len__()):
-            if array[i] < array[j]:
+    #travel through all array element
+    for i in range(0, array.__len__()):
+        #
+        for j in range(0, array.__len__()):
+            if array[j] > array[i]:
+                temp = array[i]
+                array[i] = array[j]
+                array[j] = temp
+            else:
                 continue
+        print(array)
+    return array
 
 
 
+print("The new array that sorted: ")
+print(bubble_sort(array))
 
 
 
-
-
-""""
-linklist = link_list()
-
-linklist.insert_end(1)
-linklist.insert_end(2)
-linklist.insert_end(3)
-linklist.insert_end(4)
-
-linklist.print()
-
-linklist.count(1)
-
-"""
