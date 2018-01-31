@@ -150,6 +150,20 @@ class link_list():
         del temp.next
 
 
+
+
+def swap(a, b):
+    c = 0
+    c = a
+    a = b
+    b = c
+    print(a, b)
+
+
+
+
+
+
 array = []
 print(array.__len__())
 
@@ -161,13 +175,24 @@ while keep is True:
     count += 1
     y = str(input("Are you still want to input? Y or N"))
     print(y)
-    if y is "Y":
+    if y is "y":
         continue
-    elif y is "N":
+    elif y is "n":
         break
 
 
 print("The array you created are: ", array)
+
+
+
+def bubble_sort(array):
+    for i in range(1, array.__len__()):
+        for j in range (1, array.__len__()):
+            if array[i] < array[j]:
+                continue
+
+
+
 
 
 
