@@ -195,3 +195,8 @@ def bubble_sort(arr):
 
 print(bubble_sort(arr))
 
+
+def selection_sort(arr):
+    print("The array before sorted: ", arr)
+    
+
