@@ -168,12 +168,12 @@ while keep is True:
 print("The array you created are: ", array)
 """
 
-#arr = [64, 34, 25, 12, 22, 11, 90]
-arr = [5, 1, 4, 2, 8]
-length = len(arr)
 
-print(arr)
-def bubble_sort(arr):
+
+
+def bubble_sort():
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    length = len(arr)
     for i in range(0, length):
         print(i+1)
         print(" ")
@@ -193,10 +193,22 @@ def bubble_sort(arr):
     return arr
 
 
-print(bubble_sort(arr))
 
+def selection_sort():
+    arr = [5, 7, 2, 4]
 
-def selection_sort(arr):
     print("The array before sorted: ", arr)
-    
+    sorted = []
+    length = len(arr)
+    smaller = arr[0]
+    for i in range(0, length):
+        if smaller > arr[i]:
+            smaller = arr[i]
+        else:
+            continue
+    print(smaller)
+    sorted.append(smaller)
+    print(sorted)
 
+
+selection_sort()
