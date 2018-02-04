@@ -172,43 +172,43 @@ print("The array you created are: ", array)
 
 
 def bubble_sort():
-    arr = [64, 34, 25, 12, 22, 11, 90]
+    arr = [20, 12, 10, 15, 2]
+    print("The array before sorted: ", arr)
     length = len(arr)
     for i in range(0, length):
-        print(i+1)
-        print(" ")
+        print("")
         for j in range(0, length - i -1):
             if arr[j] > arr[j+1]:
-                print(arr[j], "(arr[j])", "is bigger than ", arr[j+1], "(arr[j+1])")
                 temp = arr[j+1]
                 arr[j+1] = arr[j]
                 arr[j] = temp
                 print(arr)
             else:
-                print(arr[j], "(arr[j])", "is not less than", arr[j+1], "(arr[j+1])")
+                print(arr)
                 continue
-        print()
-        print("Array after swaped:", arr)
-        print(" ")
-    return arr
 
 
+bubble_sort()
 
 def selection_sort():
-    arr = [5, 7, 2, 4]
-
+    arr = [20, 12, 10, 15, 2]
     print("The array before sorted: ", arr)
-    sorted = []
     length = len(arr)
-    smaller = arr[0]
-    for i in range(0, length):
-        if smaller > arr[i]:
-            smaller = arr[i]
-        else:
-            continue
-    print(smaller)
-    sorted.append(smaller)
-    print(sorted)
+    for i in range(0, length-1):
+        print("")
+        for j in range(i+1, length):
+            if arr[i] > arr[j]:
+                temp = 0
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+                print(arr)
+            else:
+                continue
+                print(arr)
 
 
 selection_sort()
+
+#def
+
