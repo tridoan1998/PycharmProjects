@@ -168,16 +168,13 @@ while keep is True:
 print("The array you created are: ", array)
 """
 
-
-
-
 def bubble_sort():
     arr = [20, 12, 10, 15, 2]
     print("The array before sorted: ", arr)
     length = len(arr)
     for i in range(0, length):
         print("")
-        for j in range(0, length - i -1):
+        for j in range(0, length - i - 1):
             if arr[j] > arr[j+1]:
                 temp = arr[j+1]
                 arr[j+1] = arr[j]
@@ -188,7 +185,9 @@ def bubble_sort():
                 continue
 
 
-bubble_sort()
+
+
+#bubble_sort()
 
 def selection_sort():
     arr = [20, 12, 10, 15, 2]
@@ -208,7 +207,27 @@ def selection_sort():
                 print(arr)
 
 
-selection_sort()
+#selection_sort()
 
-#def
+
+
+def insertion_sort():
+    arr = [20, 12, 10, 15, 2]
+    print("The array before sorted: ", arr)
+    length = len(arr)
+    for i in range(0, length):
+        value = arr[i]
+        hole = i
+        while hole > 0 and arr[hole-1] > value:
+            arr[hole] = arr[hole-1]
+            hole -= 1
+        arr[hole] = value
+
+    print(arr)
+
+
+def divide(x, y):
+    return int(x/y) +1  
+
+print(divide(7, 2))
 
