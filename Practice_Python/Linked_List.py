@@ -225,9 +225,3 @@ def insertion_sort():
 
     print(arr)
 
-
-def divide(x, y):
-    return int(x/y) +1  
-
-print(divide(7, 2))
-
