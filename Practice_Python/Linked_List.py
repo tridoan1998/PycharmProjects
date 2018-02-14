@@ -166,7 +166,7 @@ while keep is True:
         break
 
 print("The array you created are: ", array)
-"""
+
 
 def bubble_sort():
     arr = [20, 12, 10, 15, 2]
@@ -225,3 +225,32 @@ def insertion_sort():
 
     print(arr)
 
+"""
+
+arr = [10, 4, 2, 3, 0, 7]
+def bubble_sortt(arr):
+    length = len(arr)
+    temp = 0
+    for i in range(0, length-1):
+        for j in range(0, length - i-1):
+            if arr[j] > arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            else:
+                continue
+    print(arr)
+
+
+def linear_search(arr, value):
+    length = len(arr)
+    gotit = False
+    for i in range(0, length):
+        if arr[i] == value:
+            gotit = True
+            return True
+
+    if gotit is not True:
+        return False
+
+print(linear_search(arr, 0))
