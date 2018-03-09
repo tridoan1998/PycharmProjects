@@ -1,4 +1,58 @@
 class Node():
+    def __init__(self):
+        self.data = 0
+        self.linknext = None
+
+class Link_Lists():
+    def __init__(self):
+        self.headnode =  None
+        self.tailnode = None
+        self.size = 0
+
+
+One = Node()
+One.data  = 1
+
+Two = Node()
+Two.data = 2
+print("sfsdf")
+print(One.data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Node():
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -252,5 +306,3 @@ def linear_search(arr, value):
 
     if gotit is not True:
         return False
-
-print(linear_search(arr, 0))
