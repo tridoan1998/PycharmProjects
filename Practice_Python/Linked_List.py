@@ -1,43 +1,51 @@
 class Node():
-    def __init__(self):
-        self.data = 0
+    def __init__(self, data = None):
+        self.data = data
         self.linknext = None
 
-class Link_Lists():
+class Linklist():
     def __init__(self):
-        self.headnode =  None
-        self.tailnode = None
+        self.head = None
+        self.tail = None
         self.size = 0
 
-
-One = Node()
-One.data  = 1
-
-Two = Node()
-Two.data = 2
-print("sfsdf")
-print(One.data)
-
-
+    def insert_end(self, data):
+        new_Node = Node(data)
+        if self.size is 0:
+            self.head = self.tail = new_Node
+        else:
+            self.tail.linknext = new_Node
+            self.tail = new_Node
+        self.size += 1
 
 
+    def print(self):
+        print("The scores are: ")
+        if self.size == 0:
+            pass
+        else:
+            temp = self.head
+            while temp != None:
+                print(temp.data)
+                temp = temp.linknext
+            return
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def length(self):
+        print("Size of the list is: ")
+        return self.size
 
 
 
+score = Linklist()
+x = int(input("How many scores: "))
+counter = 1
+while counter <= x:
+    s = input("Enter the score: ")
+    score.insert_end(s)
+    counter += 1
+
+score.print()
+print(score.length())
 
 
 
@@ -50,6 +58,27 @@ print(One.data)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 
 
 class Node():
@@ -205,7 +234,7 @@ class link_list():
 
 
 
-""""
+
 keep = True
 count = 0
 while keep is True:
@@ -279,7 +308,7 @@ def insertion_sort():
 
     print(arr)
 
-"""
+
 
 arr = [10, 4, 2, 3, 0, 7]
 def bubble_sortt(arr):
@@ -306,3 +335,6 @@ def linear_search(arr, value):
 
     if gotit is not True:
         return False
+
+
+"""
